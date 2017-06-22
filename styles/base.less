@@ -1,0 +1,114 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+
+// Syntax styles
+
+.syntax--numbers {
+  color: @orange;
+}
+
+.syntax--comment {
+  color: @green2;
+}
+
+.syntax--keyword1 {
+    color: @blue2;
+    font-weight: bold;
+}
+
+.syntax--keyword2 {
+    color: @purple2;
+    font-weight: bold;
+}
+
+.syntax--keyword3 {
+    color: @red2;
+    font-weight: bold;
+}
+
+.syntax--keyword4 {
+    color: @light-green;
+    font-weight: bold;
+}
+
+.syntax--keyword5 {
+    color: @dark-blue;
+    font-weight: bold;
+}
+
+.syntax--prefix1 {
+    color: @orange;
+    font-weight: bold;
+}
+
+.syntax--operator1 {
+    color: @blue4;
+    font-weight: bold;
+}
+
+.syntax--delimiter1 {
+    color: @blue4;
+    font-weight: bold;
+}
+
+.syntax--delimiter2 {
+    color: @blue4;
+    font-weight: bold;
+}
+
+// Mini editor
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}
